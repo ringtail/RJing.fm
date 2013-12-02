@@ -1,0 +1,11 @@
+{
+  "name": "jingCore",
+  "version": "0.0.1",
+  "description": "jing.fm core principle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ringtail",
+  "license": "MIT"
+}

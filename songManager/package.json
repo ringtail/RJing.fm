@@ -1,0 +1,11 @@
+{
+  "name": "songManager",
+  "version": "0.0.1",
+  "description": "songs manager ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ringtail",
+  "license": "MIT"
+}

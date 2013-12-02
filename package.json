@@ -1,0 +1,24 @@
+{
+  "name": "RJing.fm",
+  "version": "0.0.1",
+  "description": "a jing.fm mac clint ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ringtail/RJing.fm.git"
+  },
+  "keywords": [
+    "music",
+    "jing.fm",
+    "command"
+  ],
+  "author": "Ringtail",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ringtail/RJing.fm/issues"
+  },
+  "homepage": "https://github.com/ringtail/RJing.fm"
+}
