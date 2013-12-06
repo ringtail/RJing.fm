@@ -129,7 +129,7 @@ var player = {
 }
 module.exports = {
   init: function(email, pwd, callback) {
-    jingCore.login(email || '773913792@qq.com', pwd || '227228', callback);
+    jingCore.login(email, pwd, callback);
   },
   play: function(keys) {
     __keys = keys;
