@@ -1,0 +1,17 @@
+{
+  "name": "UI",
+  "version": "0.0.1",
+  "description": "RJplayer UI for the player",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UI",
+    "player",
+    "jing.fm",
+    "mplayer"
+  ],
+  "author": "Ringtail",
+  "license": "MIT"
+}

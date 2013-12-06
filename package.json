@@ -10,6 +10,13 @@
     "type": "git",
     "url": "https://github.com/ringtail/RJing.fm.git"
   },
+  "dependencies": {
+    "request": "*",
+    "cli-color": "*",
+    "terminal-menu":"*",
+    "async":"*",
+
+  },
   "keywords": [
     "music",
     "jing.fm",

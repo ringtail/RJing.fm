@@ -52,10 +52,7 @@ module.exports={
 			jingCore.__token.id = body.result.usr.id;
 
 			logger.correct('successfully login!');
-			callback({
-				headers:response.headers,
-				body:body
-			});
+			callback();
 
 		})
 	},

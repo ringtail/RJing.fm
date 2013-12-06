@@ -6,9 +6,7 @@ var logger = require('../logger'),
 	request = require('request'),
 	http = require('http'),
   paht = require('path'),
-  sys = require('sys'),
-  // readline = require('readline'),
-	exec = require('child_process').exec();
+  sys = require('sys');
 
 
 //
