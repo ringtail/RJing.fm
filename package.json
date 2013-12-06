@@ -14,7 +14,7 @@
     "request": "*",
     "cli-color": "*",
     "terminal-menu":"*",
-    "async":"*",
+    "async":"*"
 
   },
   "keywords": [
