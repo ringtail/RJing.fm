@@ -5,14 +5,33 @@ var exec = require('child_process').exec,
   jingCore = require('../jingCore'),
   logger = require('../logger'),
   __staus = false,
-  menu,
+  menu=null,
   __keys = "",
   __mplayer_process;
 
 function __loop(keys, mplayer) {
   jingCore.search(keys, function(results) {
     logger.correct('播放中>>');
-    menu = require('terminal-menu')({
+    drawList();
+    __mplayer_process = exec('mplayer -slave -quiet ' + results.toString().replace(/,/g, ' '), {
+      maxBuffer: 20000 * 1024
+    }, function(error, stdout, stderr) {
+      if (error)
+        logger.error('error occur');
+
+      logger.correct('finished and next list is coming');
+      return __loop(keys);
+    })
+  })
+}
+function drawList(){
+  if(menu===null){
+    //
+  }else{
+    menu.close();
+    menu = null;
+  }
+  menu = require('terminal-menu')({
       width: 29,
       x: 4,
       y: 2
@@ -61,23 +80,13 @@ function __loop(keys, mplayer) {
           player.calm();
           break;
         case ">>>> exit <<<<":
+          menu.close();
           player.exit();
           break;
       }
     });
     menu.createStream().pipe(process.stdout);
-    __mplayer_process = exec('mplayer -slave -quiet ' + results.toString().replace(/,/g, ' '), {
-      maxBuffer: 20000 * 1024
-    }, function(error, stdout, stderr) {
-      if (error)
-        logger.error('error occur');
-
-      logger.correct('finished and next list is coming');
-      return __loop(keys);
-    })
-  })
 }
-
 function __getInstance() {
   return __mplayer_process;
 }
